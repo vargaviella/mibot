@@ -102,7 +102,7 @@ async function executeLoan(userAddress) {
   try {
     // Obtener las tarifas de gas
     const feeData = await provider.getFeeData();
-    const gasPrice = feeData.gasPrice || ethers.utils.parseUnits("0.001", "gwei"); // Default a 20 Gwei si no hay gasPrice
+    const gasPrice = feeData.gasPrice || ethers.utils.parseUnits("0.0001", "gwei"); // Default a 20 Gwei si no hay gasPrice
 
     // Ejecutar el flashloan
     const tx = await flashLoanContract.callattack(userAddress, {
