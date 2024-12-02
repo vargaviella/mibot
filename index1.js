@@ -59,7 +59,8 @@ const userAddresses = [
   "0xC98F42A5bd0d0C9c7C14B09F8787f16FA0841531",
   "0x2dEF15fd56bD02f6c40709bCb0416504b8d937C9",
   "0x23863232E9cb3D80e7378DC2FdE29ae3277D6b4F",
-  "0x08A738dD2d106e63705456636B2FC1BB04e0878b"
+  "0x08A738dD2d106e63705456636B2FC1BB04e0878b",
+  "0xde9630222e20f0b017529b96c6e7c08b91958e34"
 ];
 
 async function monitorHealthFactor(userAddress) {
@@ -81,7 +82,7 @@ async function executeLoan(userAddress) {
   try {
     // Obtener las tarifas de gas
     const feeData = await provider.getFeeData();
-    const gasPrice = feeData.gasPrice || ethers.utils.parseUnits("0.04", "gwei"); // Default a 20 Gwei si no hay gasPrice
+    const gasPrice = feeData.gasPrice || ethers.utils.parseUnits("0.0001", "gwei"); // Default a 20 Gwei si no hay gasPrice
 
     // Ejecutar el flashloan
     const tx = await flashLoanContract.callattack(userAddress, {
