@@ -5,7 +5,7 @@ const { NonceManager } = ethers;
 const provider = new ethers.JsonRpcProvider("https://base.gateway.tenderly.co/4uN3bnwyzzc0SRhhVKqdxd");
 
 // Dirección y ABI del Aave LendingPool en Base
-const aaveLendingPoolAddress = "0x8F44Fd754285aa6A2b8B9B97739B79746e0475a7"; // Dirección de Aave
+const aaveLendingPoolAddress = "0x8F44Fd754285aa6A2b8B9B97739B79746e0475a7"; // Dirección de Aav
 const lendingPoolAbi = [
   {
     "inputs": [{ "internalType": "address", "name": "user", "type": "address" }],
