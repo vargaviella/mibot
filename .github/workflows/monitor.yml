@@ -19,7 +19,7 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v3  # Configurar Node.js
       with:
-        node-version: '16'  # Asegúrate de que la versión de Node.js sea compatible con tu código
+        node-version: '16'  # Asegúrate de que la versión de Node.js sea compatible con tu 
 
     - name: Install dependencies
       run: npm install  # Instalar las dependencias de Node.js (si tienes un package.json)
