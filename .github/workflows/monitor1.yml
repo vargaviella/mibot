@@ -1,4 +1,4 @@
-name: Monitor Health Factor
+name: Monitor Health Factor 1
 
 # Programar el flujo de trabajo para que se ejecute cada 5 minutos
 on:
