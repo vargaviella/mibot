@@ -1,6 +1,6 @@
 name: searcher
 
-# Programar el flujo de trabajo para que se ejecute cada 5 minutos
+# Programar el flujo de trabajo para que se ejecute cada 5 minuto
 on:
   schedule:
     - cron: '*/50 * * * *'  # Ejecuta cada 5 minutos
