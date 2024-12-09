@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3  # Obtener el código del repositorio
+      uses: actions/checkout@v3  # Obtener el código del repositori
 
     - name: Set up Node.js
       uses: actions/setup-node@v3  # Configurar Node.js
