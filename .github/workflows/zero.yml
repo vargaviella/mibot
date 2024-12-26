@@ -14,18 +14,31 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3  # Obtener el código del repositori
+      uses: actions/checkout@v3  # Obtener el código del repositorio
 
     - name: Set up Node.js
       uses: actions/setup-node@v3  # Configurar Node.js
       with:
-        node-version: '16'  # Asegúrate de que la versión de Node.js sea compatible con tu 
+        node-version: '16'  # Asegúrate de que la versión de Node.js sea compatible con tu proyecto
 
     - name: Install dependencies
       run: npm install  # Instalar las dependencias de Node.js (si tienes un package.json)
 
-    - name: Run the script
+    - name: Get last modified file
+      id: last_modified_file
+      run: |
+        # Obtener el último archivo modificado
+        LAST_MODIFIED_FILE=$(git diff --name-only HEAD^ HEAD | grep '\.js$' | tail -n 1)
+        echo "Último archivo modificado: $LAST_MODIFIED_FILE"
+        echo "LAST_MODIFIED_FILE=$LAST_MODIFIED_FILE" >> $GITHUB_ENV
+
+    - name: Run the last modified script
       env:
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}  # Accediendo al Secret de la PK
       run: |
-        node index2.js
+        echo "Ejecutando el archivo: $LAST_MODIFIED_FILE"
+        if [ -z "$LAST_MODIFIED_FILE" ]; then
+          echo "No se encontró ningún archivo .js modificado, saliendo."
+          exit 1
+        fi
+        node $LAST_MODIFIED_FILE
