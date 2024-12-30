@@ -1,4 +1,4 @@
-name: Monitor Health Factor 1
+name: Monitor Health Factor 3
 
 # Programar el flujo de trabajo para que se ejecute cada 5 minutos
 on:
@@ -28,4 +28,4 @@ jobs:
       env:
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}  # Accediendo al Secret de la PK
       run: |
-        node index1.js
+        node index2.js
