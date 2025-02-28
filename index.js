@@ -31,7 +31,7 @@ const wallet = new ethers.Wallet(process.env.PRIVATE_KEY);
 const signer = new NonceManager(wallet.connect(provider));
 
 // Dirección y ABI del contrato FlashLoan
-const flashLoanContractAddress = "0xb177CfCbAc6EF5353CB5aFaa9C5A8B9Ce6700E52"; // Dirección de tu contrato
+const flashLoanContractAddress = "0x4875bBc0D2E0654434653b0F9aaE840D3E3A4137"; // Dirección de tu contrato
 const flashLoanContractAbi = [
   {
     "inputs": [
