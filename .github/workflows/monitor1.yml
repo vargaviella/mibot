@@ -1,6 +1,6 @@
 name: Monitor Health Factor 3
 
-# Programar el flujo de trabajo para que se ejecute cada 5 minuto
+# Programar el flujo de trabajo para que se ejecute cada 5 min
 on:
   schedule:
     - cron: '*/500000 * * * *'  # Ejecuta cada 5 minutos
