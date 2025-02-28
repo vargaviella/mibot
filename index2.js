@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 const { NonceManager } = ethers;
 
 // Configuración del proveedor y contrato de Aave en Base Mainnet
-const provider = new ethers.JsonRpcProvider("https://blast-mainnet.g.alchemy.com/v2/b6oJemkCmlgEGq1lXC5uTXwOHZA14WNP");
+const provider = new ethers.JsonRpcProvider("https://blast.gateway.tenderly.co/5yGcUWjtMCxxz5YoLUD0sH");
 
 // Dirección y ABI del Aave LendingPool en Base
 const aaveLendingPoolAddress = "0xa70B0F3C2470AbBE104BdB3F3aaa9C7C54BEA7A8"; // Dirección de Aave
