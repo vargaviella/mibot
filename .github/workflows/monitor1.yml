@@ -28,4 +28,4 @@ jobs:
       env:
         PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}  # Accediendo al Secret de la PK
       run: |
-        node index2.js
+        node index1.js
